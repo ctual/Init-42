@@ -1,0 +1,20 @@
+#!/bin/bashi
+
+if [ -f /home/charlie/backup.crontab ]
+then
+	OLD="$(md5sum /home/charlie/backup.crontab | cut -d " " -f 1)"
+	CURRENT="$(md5sum /etc/crontab | cut -d " " -f 1)"
+
+if [ "$OLD" != "$CURRENT" ]
+	then
+		echo "Warning : Crontab modified"
+		mail -s "The file crontab has been modified" root
+		cat /etc/crontab > /home/charlie/backup.crontab
+	else
+		echo "Crontab safe"
+		exit 0
+	fi
+else
+	echo "backup.crontab hass been created"
+	cat /etc/crontab > /home/charlie/backup.crontab
+fi

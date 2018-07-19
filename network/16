@@ -1,0 +1,1 @@
+Pour repondre a la question j'aurais du faire cette commande : echo "46.19.122.85 intra.42.fr >> /etc/hosts" en revanche je n'en ai pas les droits sans sudo

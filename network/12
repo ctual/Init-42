@@ -1,0 +1,1 @@
+ping -c3 10.511.1.253 && echo Server Up || echo Server Down

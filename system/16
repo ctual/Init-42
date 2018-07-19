@@ -1,0 +1,1 @@
+La commande cron permet de lancer des commandes a horaires regulier et la commande crontab -e permet d'editer le fonctionnement du cron
